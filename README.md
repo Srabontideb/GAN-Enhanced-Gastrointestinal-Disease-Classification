@@ -4,20 +4,22 @@ This project explores the use of Generative Adversarial Networks (GANs) to impro
 
 ## 🧠 Project Overview
 
-This repository contains partial work on a deep learning pipeline for GI image classification, aiming to:
+This repository contains whole work on a deep learning pipeline for GI image classification, aiming to:
 
 - Enhance data diversity using GAN-generated synthetic samples.
 - Improve classification accuracy on underrepresented disease classes.
 - Apply preprocessing techniques to improve lesion visibility.
-- Optionally visualize model decision-making using explainability tools.
+- Visualize model decision-making using explainability tools.
 
 ## 🧰 Components Implemented So Far
 
-- ✅ Preprocessing with CLAHE and Gaussian Smoothing
-- ✅ ConvMixer-based classifier with External Attention
-- ✅ Initial setup for training and evaluation
+- ✅ Preprocessing with CLAHE and Gaussian Smoothing (Color and Contrast Normalization) -> MSRCR (Multi-Scale Retinex with Color Restoration) to further enhance lesions and mucosal textures -> Bilateral filtering to suppress compression artifacts.
+- ✅ ConvMixer-based classifier with External Attention (for original dataset)
+- ✅ Experiment with ConvNeXt-T, Swin Transformer and Vision Transformer with Attention Rollout.
+- ✅ Initial setup for training using cosine annealing and CutMix Regularization.
+- ✅ Grad-CAM-based post-processing visualization.
+- ✅ Generating Accuracy, F1-score, AUC, Precision/Recall(for original data)
 - 🔄 (In progress) GAN-based data augmentation with StyleGAN2-ADA
-- 🔄 (Planned) Grad-CAM-based post-processing visualization
 
 
 📊 Dataset
